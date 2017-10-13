@@ -8,7 +8,7 @@ use Illuminate\Support\ServiceProvider as BaseProvider;
 /**
  * @codeCoverageIgnore
  */
-class ServiceProvider extends BaseProvider
+class MutableServiceProvider extends BaseProvider
 {
 
     /**
