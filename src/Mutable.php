@@ -28,6 +28,14 @@ trait Mutable
      */
     public static function bootMutable()
     {
+        if (!isset(static::$attributeMutator)) {
+            if (function_exists('app') && app()->bound('eloquence.mutator')) {
+                static::setAttributeMutator(app('eloquence.mutator'));
+            } else {
+                static::setAttributeMutator(new Mutator);
+            }
+        }
+        
         $hooks = new Hooks;
 
         foreach (['setAttribute', 'getAttribute', 'toArray'] as $method) {
