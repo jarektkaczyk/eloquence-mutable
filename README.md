@@ -1,6 +1,6 @@
 # Sofa/Eloquence
 
-[![Build Status](https://travis-ci.org/jarektkaczyk/eloquence-mutable.svg)](https://travis-ci.org/jarektkaczyk/eloquence-mutable) [![Coverage Status](https://coveralls.io/repos/jarektkaczyk/eloquence-mutable/badge.svg)](https://coveralls.io/r/jarektkaczyk/eloquence-mutable) [![Code Quality](https://scrutinizer-ci.com/g/jarektkaczyk/eloquence-mutable/badges/quality-score.png)](https://scrutinizer-ci.com/g/jarektkaczyk/eloquence-mutable) [![Downloads](https://poser.pugx.org/sofa/eloquence-mutable/downloads)](https://packagist.org/packages/sofa/eloquence-mutable) [![stable](https://poser.pugx.org/sofa/eloquence-mutable/v/stable.svg)](https://packagist.org/packages/sofa/eloquence-mutable)
+[![GitHub Tests Action Status](https://github.com/jarektkaczyk/eloquence-mutable/workflows/Tests/badge.svg)](https://github.com/jarektkaczyk/eloquence-mutable/actions?query=workflow%3Atests+branch%3Amaster) [![Coverage Status](https://coveralls.io/repos/jarektkaczyk/eloquence-mutable/badge.svg)](https://coveralls.io/r/jarektkaczyk/eloquence-mutable) [![Code Quality](https://scrutinizer-ci.com/g/jarektkaczyk/eloquence-mutable/badges/quality-score.png)](https://scrutinizer-ci.com/g/jarektkaczyk/eloquence-mutable) [![Downloads](https://poser.pugx.org/sofa/eloquence-mutable/downloads)](https://packagist.org/packages/sofa/eloquence-mutable) [![stable](https://poser.pugx.org/sofa/eloquence-mutable/v/stable.svg)](https://packagist.org/packages/sofa/eloquence-mutable)
 
 Easy and flexible extensions for the [Eloquent ORM](https://laravel.com/docs/eloquent).
 

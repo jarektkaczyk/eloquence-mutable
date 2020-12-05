@@ -2,21 +2,22 @@
 
 namespace Sofa\Eloquence\Tests;
 
-use Mockery as m;
 use Illuminate\Database\Eloquent\Model;
+use Mockery;
+use PHPUnit\Framework\TestCase;
 use Sofa\Eloquence\Eloquence;
 use Sofa\Eloquence\Mutable;
 
-class MutableTest extends \PHPUnit_Framework_TestCase
+class MutableTest extends TestCase
 {
-    public function tearDown()
+    protected function tearDown(): void
     {
-        m::close();
+        $this->addToAssertionCount(Mockery::getContainer()->mockery_getExpectationCount());
+        Mockery::close();
+        parent::tearDown();
     }
 
-    /**
-     * @test
-     */
+    /** @test */
     public function it_mutates_attributes_on_set()
     {
         $model = $this->getModel();
@@ -28,10 +29,7 @@ class MutableTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('email@domain.com', $model->getAttributes()['email']);
     }
 
-    /**
-     * @test
-     */
-    public function it_mutates_attributes_to_array()
+    /** @test */public function it_mutates_attributes_to_array()
     {
         $model = $this->getModel();
         $mutator = $model->getAttributeMutator();
@@ -45,7 +43,7 @@ class MutableTest extends \PHPUnit_Framework_TestCase
 
     protected function getModel()
     {
-        $mutator = m::mock('\Sofa\Eloquence\Contracts\Mutator');
+        $mutator = Mockery::mock('\Sofa\Eloquence\Contracts\Mutator');
 
         $model = new MutableEloquentStub;
         $model->setRawAttributes(['first_name' => 'jarek', 'last_name' => 'tkaczyk', 'email' => 'JAREK@SOFTONSOFA.COM']);
